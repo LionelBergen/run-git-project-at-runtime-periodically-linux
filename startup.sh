@@ -1,8 +1,8 @@
 #!/bin/sh  
 auto_update_this_dir=true
-LOGILE=startup.log
-PROJECT_1_LOGILE=reddit_comment_reader.log
-PROJECT_2_LOGILE=reddit_agree_with_you.log
+LOGFILE=startup.log
+PROJECT_1_LOGFILE=reddit_comment_reader.log
+PROJECT_2_LOGFILE=reddit_agree_with_you.log
 PROJECT_1_DIRECTORY="../git/reddit-comment-reader"
 PROJECT_2_DIRECTORY="../git/reddit-agree-with-you"
 
@@ -13,9 +13,10 @@ fi
 
 forever stopall > $LOGFILE
 
-git -C $PROJECT_1_DIRECTORY pull > $LOGILE
+git -C $PROJECT_1_DIRECTORY pull > $LOGFILE
+git -C $PROJECT_2_DIRECTORY pull > $LOGFILE
 
-forever start $PROJECT_1_DIRECTORY > $PROJECT_1_LOGILE
-forever start $PROJECT_2_DIRECTORY > $PROJECT_1_LOGILE
+forever start $PROJECT_1_DIRECTORY > $PROJECT_1_LOGFILE
+forever start $PROJECT_2_DIRECTORY > $PROJECT_2_LOGFILE
 
-echo "Finished startup.sh" > $LOGILE
+echo "Finished startup.sh" > $LOGFILE
