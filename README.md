@@ -6,5 +6,5 @@ This way you can update your project via GIT and your machine should pickup thos
 
 
 # Quick Start   
-1) Create a crontab on your linux machine E.G `crontab -e`, take note of the location you give the file. I put mine in `/home/myusername/Desktop/startup/crontab`.  
+1) Create a crontab on your linux machine E.G `crontab -e`, put the file in the location of this directory, given the name `crontab`. I put mine in `/home/myusername/Desktop/startup/crontab`.  
 2) 
