@@ -17,7 +17,7 @@ forever stopall >> $LOGFILE
 git -C $PROJECT_1_DIRECTORY pull >> $LOGFILE
 git -C $PROJECT_2_DIRECTORY pull >> $LOGFILE
 
-forever -c "node -r dotenv/config" --workingDir $PROJECT_1_DIRECTORY start $PROJECT_1_DIRECTORY/app.js -l $cwd/$PROJECT_1_LOGFILE >> $LOGFILE
+forever -c "node -r dotenv/config" --workingDir $PROJECT_1_DIRECTORY -l $cwd/$PROJECT_1_LOGFILE start $PROJECT_1_DIRECTORY/app.js >> $LOGFILE
 # forever start $PROJECT_2_DIRECTORY -l $cwd/$PROJECT_2_LOGFILE --workingDir $PROJECT_2_DIRECTORY >> $LOGFILE
 
 echo "Finished startup.sh" >> $LOGFILE
