@@ -8,7 +8,7 @@ PROJECT_2_DIRECTORY="../git/reddit-agree-with-you"
 
 # Runs a git pull for this directory
 if ["$auto_update_this_dir" = true]; then
-  git pull
+  git pull > $LOGFILE
 fi
 
 forever stopall > $LOGFILE
