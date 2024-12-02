@@ -7,7 +7,7 @@ PROJECT_1_DIRECTORY="../git/reddit-comment-reader"
 PROJECT_2_DIRECTORY="../git/reddit-agree-with-you"
 
 # Runs a git pull for this directory
-if ["$auto_update_this_dir" = true]; then
+if [ "$auto_update_this_dir" = true ] ; then
   git pull >> $LOGFILE
 fi
 
